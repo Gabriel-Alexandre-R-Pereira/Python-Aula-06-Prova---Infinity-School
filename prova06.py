@@ -44,11 +44,11 @@ while True:
         novo_produto_preco = float(input("Digite o preço do produto: "))
         print(cadastrar_produto(nome=novo_produto_nome, preco=novo_produto_preco))
     elif op == "2":
-        resposta_ao_usuario = listar(lista=lista_produtos), exibir_mensagem(mensagem="Fim da lista de produtos.") if verificar_lista(lista=lista_produtos) == True else print("\nNão há produtos na lista.\n\n")
+        resposta_ao_usuario = listar(lista=lista_produtos), exibir_mensagem(mensagem="Fim da lista de produtos.") if verificar_lista(lista=lista_produtos) == True else exibir_mensagem("Não há produtos na lista.")
     elif op == "3":
-        resposta_ao_usuario = filtrar_caros() if verificar_lista(lista=lista_produtos) == True else print("\nNão há produtos na lista para serem filtrados.\n\n")
+        resposta_ao_usuario = filtrar_caros() if verificar_lista(lista=lista_produtos) == True else exibir_mensagem("Não há produtos na lista para serem filtrados.")
     elif op == "4":
-        print("\nEncerrando sistema...\n\n")
+        exibir_mensagem("Encerrando sistema...")
         break
     else:
-        print("\nOpção inválida!\n\n")
+        exibir_mensagem("Opção inválida!")
